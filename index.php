@@ -11,6 +11,7 @@
   </head>
 
   <body>
+
   <header>
     <?php include('includehead.php');?>
   </header>
@@ -21,7 +22,6 @@
       <a href="#">Actualités</a>
       <a href="#">Evénements</a>
       <a href="#">Code_Space()</a>
-      <a href="#">Mon compte</a>
     </div>
 
   </body>

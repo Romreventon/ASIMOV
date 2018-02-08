@@ -3,14 +3,16 @@
 		    if (isset($_SESSION['prenom'])) 
 		    {
 	    ?>
-	    	<p>Vous êtes connecté.</p>
+	    
+        	<a href="#">Mon compte</a>
 	    <?php
 	    	} 
 
 	    	else 
 	    	{
 	    ?>
-	    	<p>Vous n'êtes pas connecté.</p>
+	    	<div id="Inscript"><a href="#">Inscription</a></div>
+        	<div id="Connex"><a href="#">Connexion</a></div>
 
 	    <?php
 	    	}

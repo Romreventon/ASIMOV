@@ -45,7 +45,6 @@ td {
 
 .header {
 	position: relative;
-	top: -40px;
 	width: 100%;
 	background-color: rgb(150,190,0);
 	/*padding: 15px;*/
@@ -86,9 +85,30 @@ td {
 
 .pseudo
 {
+	background-color:  rgb(120,120,120);
 	position: relative;
-	top : -50px;
+
+	top : -30px;
+	left: 82%;
+
+	width: 18%;
+	height: 50px;
+
 	text-align: right;
+}
+
+.pseudo a
+{	
+	padding: 27px;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+
+}
+
+.pseudo a:hover 
+{
+	background-color: #CCCCCC;
 }
 
 a:link {
