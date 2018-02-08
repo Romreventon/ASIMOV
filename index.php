@@ -14,23 +14,15 @@
   <header>
     <?php include('includehead.php');?>
   </header>
-    <?php
-    if (isset($_SESSION['prenom'])) {
-    ?>
-      <div class="nav">
-        <a href="#" class="home">Home</a>
-        <a href="#">Actualités</a>
-        <a href="#">Evénements</a>
-        <a href="#">Code_Space()</a>
-        <a href="#">Mon compte</a>
-      </div>
-    <?php
-    } else {
-    ?>
-      <p>t'es pas connecté connard</p
-    <?php
-    }
-    ?>
+    
+
+    <div class="nav">
+      <a href="#" class="home">Home</a>
+      <a href="#">Actualités</a>
+      <a href="#">Evénements</a>
+      <a href="#">Code_Space()</a>
+      <a href="#">Mon compte</a>
+    </div>
 
   </body>
 </html> 
