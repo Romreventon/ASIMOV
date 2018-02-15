@@ -1,0 +1,2 @@
+a:2:{i:0;a:3:{s:5:"titre";s:16:"Une news de test";s:6:"auteur";s:12:"christophetd";s:7:"contenu";s:77:"J'ai remarqué que les news de test portaient souvent toutes le même titre ...";}i:1;a:3:{s:5:"titre";s:14:"Une autre news";s:6:"auteur";s:8:"tarzoune";s:7:"contenu";s:35:"Bonjour,
+J'aime bien les news !";}}
