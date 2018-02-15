@@ -78,6 +78,29 @@
     <?php
     }
     ?>
+    <section>
+      <h2>
+        Les actus !
+      </h2>
+      <article>
+        <h3>
+          Les petits pédestres
+        </h3>
+        <p>
+          On se promenait tout deux et puis..... MERDE ! 
+        </p>
+      </article>
+      <hr />
+      <article>
+        <h3>
+          Romanichou
+        </h3>
+        <p>
+          Romain !!!!!
+        </p>
+      </article>
+      
+    </section>
 
   </body>
 </html> 
