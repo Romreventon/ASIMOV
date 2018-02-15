@@ -11,8 +11,6 @@
   </head>
 
   <body>
-
-   <?php include('includehead.php');?>
     <?php
     if (isset($_SESSION['id'])) {
     ?>
@@ -26,8 +24,15 @@
     <?php
     } else {
     ?>
-      
-   <?php include('navbar.php');?>
+      <div class="header"><img src="Logo_ASIMOV.png" width="5%"></div>
+      <div class="nav">
+        <a href="#" class="home">Home</a>
+        <a href="#">Actualités</a>
+        <a href="#">Evénements</a>
+        <a href="#">Code_Space()</a>
+        <a href="#">Mon compte</a>
+        <a href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto";>Login</a>
+      </div>
 
         <div id="id01" class="modal">
           
