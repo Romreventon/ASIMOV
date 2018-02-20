@@ -1,101 +1,42 @@
 <?php
   session_start();
-?>
+  include("header.php");
 
-<!DOCTYPE html>
-<html>
-  <head>     
-    <meta charset="UTF-8">
-    <title>ASIMOV</title>
-    <link href="monstyle.css" rel="stylesheet" media="all">
-  </head>
+  if (isset($_SESSION['id_user'])) {
+    include("menu_nav.php"); ?>
 
-  <body>
-
-   <?php include('includehead.php');?>
-    <?php
-    if (isset($_SESSION['id'])) {
-    ?>
-      <div class="nav">
-        <a href="#" class="home">Home</a>
-        <a href="#">Actualités</a>
-        <a href="#">Evénements</a>
-        <a href="#">Code_Space()</a>
-        <a href="#">Mon compte</a>
-      </div>
-    <?php
-    } else {
-    ?>
-      
-   <?php include('navbar.php');?>
-
-        <div id="id01" class="modal">
-          
-          <form class="modal-content animate" action="/action_page.php">
-            <div class="imgcontainer">
-              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-              <img src="img_avatar2.png" alt="Avatar" class="avatar">
-            </div>
-
-            <div class="container">
-              <label for="uname"><b>Username</b></label>
-              <input type="text" placeholder="Enter Username" name="uname" required>
-
-              <label for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" required>
-                
-              <button type="submit">Login</button>
-              <label>
-                <a href="inscription.html">Inscription</a>
-              </label>
-            </div>
-
-            <div class="container" style="background-color:#f1f1f1">
-              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-              <span class="psw">Forgot <a href="#">password?</a></span>
-            </div>
-          </form>
-        </div>
-
-        <script>
-        // Get the modal
-        var modal = document.getElementById('id01');
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-        </script>
-      
-
-    <?php
-    }
-    ?>
     <section>
       <h2>
-        Les actus !
+        Bienvennue !
       </h2>
       <article>
-        <h3>
-          Les petits pédestres
-        </h3>
-        <p>
-          On se promenait tout deux et puis..... MERDE ! 
-        </p>
+      <h3>Activités</h3>
+        <ul>
+          <li>Découverte et apprentissage de l'informatique et ses langages pour tous.</li>
+          <li>Rencontre avec les anciens étudiants du département informatique et facilitation des recherches de stages et d'emplois pour ses membres.</li>
+          <li>Organisation d'évènements liés aux jeux-vidéo et à l'informatique.</li>
+        </ul>
       </article>
-      <hr />
+      <hr/>
       <article>
-        <h3>
-          Romanichou
-        </h3>
+        <h3>Contacts</h3>
+        <ul>
+          <li>Président : Tristan BIARDEAU</li>
+          <li>Secrétaire : Tristan BOUQUET</li>
+          <li>Trésorier : Ewen CHAUDEMANCHE</li>
+        </ul>
         <p>
-          Romain !!!!!
-        </p>
+          asimov.lemans@gmail.fr<br/>
+          <a href="https://www.facebook.com/assoAsimov">https://www.facebook.com/assoAsimov</a>
+        </p><br/>
       </article>
       
     </section>
+    
+  <?php
+  }
+  else
+    header('Location: auth.php');
 
-  </body>
-</html> 
+  include("footer.php");  
+?>
