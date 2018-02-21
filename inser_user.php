@@ -11,7 +11,7 @@ if (isset($_POST['bt_ajouter'])) {
 
 	$connect = connexion_bdd();
 	//Mise à jour des informations utilisateur
-	$query = sprintf("INSERT INTO users (nom, prenom, mail, pwd, promo, rang, enregistre) VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%d');",  
+	$query = sprintf("INSERT INTO ". $users ." (nom, prenom, mail, pwd, promo, rang, enregistre) VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%d');",  
 	mysqli_real_escape_string($connect, $new_nom),
 	mysqli_real_escape_string($connect, $new_prenom),
 	mysqli_real_escape_string($connect, $new_mail),

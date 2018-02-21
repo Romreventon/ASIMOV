@@ -10,10 +10,10 @@ $connect = connexion_bdd();
 	$nom = $_POST['nom'];
 	$prenom = $_POST['prenom'];
 	$pwd = $_POST['pwd'];
-	$promo = $_POST['promo'];
+	$promo = $_POST['new_promo'];
 
 	//Mise à jour des informations utilisateur
-	$query = sprintf("UPDATE users SET mail='%s',nom='%s',prenom='%s', pwd='%s', promo='%s' WHERE id_user='$id_user'",  
+	$query = sprintf("UPDATE ". $users ." SET mail='%s',nom='%s',prenom='%s', pwd='%s', promo='%s' WHERE id_user='$id_user'",  
 		mysqli_real_escape_string($connect, $mail),
 		mysqli_real_escape_string($connect, $nom),
 		mysqli_real_escape_string($connect, $prenom),

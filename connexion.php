@@ -14,15 +14,22 @@
 			echo "<a href=\"index.php\">retour</a>";
 		}
 		else {
-			$query = "SELECT * FROM users";
+			$query = "SELECT * FROM ". $users;
 			$result = mysqli_query($connect, $query);
 			
 			while ($data = mysqli_fetch_assoc($result)) {
-				if ($mail == $data["mail"] && $pwd == $data["pwd"] && $data["enregistre"] == 1) {
-					$_SESSION['id_user'] = $data["id_user"];
-					$_SESSION['rang'] = $data["rang"];
-					$_SESSION['login_error'] = 0;
-					break;
+				if ($mail == $data["mail"] && $pwd == $data["pwd"]) {
+					if ($data["enregistre"] == 1) {
+						$_SESSION['id_user'] = $data["id_user"];
+						$_SESSION['rang'] = $data["rang"];
+						$_SESSION['login_error'] = 0;
+						break;
+					}
+					else {
+						$_SESSION['login_error'] = 1;
+						$_SESSION['inscrip_valide'] = 0;
+						break;
+					}
 				}
 				else
 					$_SESSION['login_error'] = 1;

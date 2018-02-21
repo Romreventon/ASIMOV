@@ -11,7 +11,7 @@
     include_once("connexion_bdd.php");
       $connect = connexion_bdd();
       $id_user = $_GET['id'];
-      $result = mysqli_query($connect, "SELECT * FROM users WHERE id_user=$id_user");
+      $result = mysqli_query($connect, "SELECT * FROM ". $users ." WHERE id_user=$id_user");
       while ($data = mysqli_fetch_assoc($result)) {
         $mail =  $data['mail'];
         $nom = $data['nom'];
@@ -32,7 +32,7 @@
         $enregistre = $_POST['enregistre'];
   
       //Mise à jour des informations utilisateur
-      $query = sprintf("UPDATE users SET mail='%s',nom='%s',prenom='%s', pwd='%s', promo='%s', rang='%s', enregistre='%d' WHERE id_user='$id_user'",  
+      $query = sprintf("UPDATE ". $users ." SET mail='%s',nom='%s',prenom='%s', pwd='%s', promo='%s', rang='%s', enregistre='%d' WHERE id_user='$id_user'",  
       mysqli_real_escape_string($connect, $mail),
       mysqli_real_escape_string($connect, $nom),
       mysqli_real_escape_string($connect, $prenom),

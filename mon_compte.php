@@ -10,7 +10,7 @@
 
 		$id_user = $_SESSION['id_user'];
 		$connect = connexion_bdd();
-    $result = mysqli_query($connect, "SELECT * FROM users WHERE id_user=$id_user");
+    $result = mysqli_query($connect, "SELECT * FROM ". $users ." WHERE id_user=$id_user");
 		$data = mysqli_fetch_assoc($result);
 			$mail =  $data['mail'];
 			$nom = $data['nom'];
@@ -42,7 +42,7 @@
 
 
 			        <label><b>Promotion</b></label>        
-							<select name="promo">
+							<select name="new_promo">
 			          <option value="L1" <?php if ($promo == "L1") echo "selected";?> >L1</option>
 			          <option value="L2" <?php if ($promo == "L2") echo "selected";?> >L2</option>
 			          <option value="L3" <?php if ($promo == "L3") echo "selected";?> >L3</option>

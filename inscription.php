@@ -10,7 +10,7 @@
       <link href="monstyle.css" rel="stylesheet" media="all">
   </head>
  
-    <body id="auth_wall">
+    <body class="auth_background">
       <div class="img_container">
       <img src="Logo_ASIMOV.png" alt="Logo_ASIMOV" class="logo">
     </div>

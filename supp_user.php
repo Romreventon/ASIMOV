@@ -12,7 +12,7 @@
   		if ($_POST['supp'] == "oui") {
   			$id_user = $_GET['id'];
   			$connect = connexion_bdd();
-  			mysqli_query($connect, "DELETE FROM users WHERE id_user=$id_user");
+  			mysqli_query($connect, "DELETE FROM ". $users ." WHERE id_user=$id_user");
   			?>
 			<script type="text/javascript">
 						window.opener.location.reload();//recharge la page de l'appelant de la popup

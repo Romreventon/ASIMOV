@@ -3,7 +3,7 @@
     text-align: center;
 }
 
-#auth_wall {
+.auth_background {
     background-image: url("matrix4.jpg");
 }
 .h2_white {
@@ -30,7 +30,15 @@
 }
 
 /* Full-width inputs */
-input[type=text], input[type=password] {
+.auth_form input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.auth_form input[type=password] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -41,6 +49,7 @@ input[type=text], input[type=password] {
 
 /* Set a style for all buttons */
 button {
+    /*background-color: #4CAF50;*/
     background-color: rgb(1,49,95);
     color: white;
     padding: 14px 20px;
@@ -151,17 +160,15 @@ table {
 
 th, td {
     text-align: left;
-    padding: 5px;
+    /*padding: 5px;*/
 }
 
 .header {
     position: relative;
     width: 100%;
-    /*background-color: rgb(120,120,120);*/
     background-image: url("matrix4.jpg");
     padding: 5px;
-    text-align: center;
-    font-size: 130%;
+    text-align: center; /* centrer le logo d'asimov*/
 }
 .nav {
     position: relative;
@@ -201,28 +208,10 @@ section h2 {
     position: relative;
     font-weight: bold;
     padding: 1%;
-    /*font-size: 125%; */
-    /*text-align: center;*/
 }
 
-section ul, li {
-        color: rgb(50,50,50);
-}
-
-article
-{
+article {
     margin-left: 5%;
     margin-right: 5%;
 }
-
-#poire {
-    list-style-image: url(poire_small.png);
-}
-#pomme {
-    list-style-image: url(20px.png);
-}
-#fraise {
-    list-style-image: url(fraise.png);
-}
-
 

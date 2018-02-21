@@ -8,7 +8,7 @@
 	else { 
 		include("menu_nav.php");
 		$connect = connexion_bdd();
-		$query = "SELECT * FROM users";
+		$query = "SELECT * FROM ". $users;
 		$result = mysqli_query($connect, $query);
 		?>
 
@@ -34,7 +34,7 @@
 						<td><?php echo $data['pwd'] ?></td>
 						<td><?php echo $data['promo'] ?></td>
 						<td><?php echo $data['rang'] ?></td>
-						<td><a href="javascript:pop('add_user.php?id=<?php echo $data['id_user'] ?>', 'supp', 'width=600, height=300')">traiter</a></td>
+						<td><a href="javascript:pop('add_user.php?id=<?php echo $data['id_user'] ?>', 'supp', 'width=600, height=300')"><button>traiter</button></a></td>
 					</tr> <?php
 				}
 			} ?>
@@ -53,7 +53,7 @@
   				</tr>
 
 			<?php
-	  	$query = "SELECT * FROM users";
+	  	$query = "SELECT * FROM ". $users;
 	  	$result = mysqli_query($connect, $query);
 			while ($data = mysqli_fetch_assoc($result)) {
 				if ($data['enregistre'] == 1) { ?>
@@ -65,8 +65,8 @@
 						<td><?php echo $data['pwd'] ?></td>
 						<td><?php echo $data['promo'] ?></td>
 						<td><?php echo $data['rang'] ?></td>
-						<td><a href="javascript:pop('modif_user.php?id=<?php echo $data['id_user'] ?>', 'modif', 'width=500,height=650')">modifier</a></td>
-						<td><a href="javascript:pop('supp_user.php?id=<?php echo $data['id_user'] ?>', 'supp', 'width=600, height=300')">supprimer</a></td>
+						<td><a href="javascript:pop('modif_user.php?id=<?php echo $data['id_user'] ?>', 'modif', 'width=500,height=650')"><button>modifier</button></a></td>
+						<td><a href="javascript:pop('supp_user.php?id=<?php echo $data['id_user'] ?>', 'supp', 'width=600, height=300')"><button>supprimer</button></a></td>
 					</tr> <?php
 				}
 			} ?>
@@ -91,8 +91,21 @@
 							<td><input type="text" name="new_nom" required></td>
 							<td><input type="text" name="new_prenom" required></td>
 							<td><input type="password" name="new_pwd" required></td>
-							<td><input type="text" name="new_promo" required></td>
-							<td><input type="text" name="new_rang" required></td>
+							<td>
+							<select name="new_promo">
+			          <option value="L1">L1</option>
+			          <option value="L2">L2</option>
+			          <option value="L3">L3</option>
+			          <option value="M1">M1</option>
+			          <option value="M2">M2</option>
+			        </select>
+			        <td>
+			        <select name="new_rang">
+			          <option value="ADMIN">Administrateur</option>
+			          <option value="USER">Simple</option>
+			        </select>
+							</td>
+
 							<td><button type="submit" name="bt_ajouter" required>Ajouter</button></td>
 						</tr>
 					</table>

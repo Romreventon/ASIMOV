@@ -1,4 +1,8 @@
 <?php
+	$users = "users";
+	$news = "news";
+
+
 	function connexion_bdd() {
 		$server = "localhost";
 		$user = "root";
